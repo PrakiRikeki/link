@@ -4,7 +4,7 @@
     <title>Link Umleitung</title>
 </head>
 <body>
-    <a href="#" id="myLink">Klick mich</a>
+    <a href="#" id="myLink" onclick="changeLink()">Klick mich</a>
 
     <script>
         // Hole das Element mit der ID "myLink"
@@ -22,9 +22,6 @@
 
         // Funktion, um den Link zu ändern
         function changeLink() {
-            // Teile den Link am letzten "/"
-            const parts = originalLink.split("/");
-            const lastPart = parts[parts.length - 1]; // Der letzte Teil (z.B. 1.png)
 
             // Bilde den neuen Link
             const newLink = "https://prakirikeki.github.io/link/mantis/data/" + id + ".jpg";
