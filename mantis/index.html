@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Umleitung</title>
+</head>
+<body>
+    <a href="#" id="myLink">Klick mich</a>
+
+    <script>
+        // Hole das Element mit der ID "myLink"
+        const link = document.getElementById("myLink");
+
+        // Setze den ursprünglichen Link (passe ihn an deine Bedürfnisse an)
+        const originalLink = "github.com/repo/folder/1.png";
+
+        // Funktion, um den Link zu ändern
+        function changeLink() {
+            // Teile den Link am letzten "/"
+            const parts = originalLink.split("/");
+            const lastPart = parts[parts.length - 1]; // Der letzte Teil (z.B. 1.png)
+
+            // Bilde den neuen Link
+            const newLink = "kp.de/meins/deins/" + lastPart;
+
+            // Setze den href-Attribut des Links
+            link.href = newLink;
+        }
+
+        // Rufe die Funktion auf, wenn die Seite geladen wird
+        changeLink();
+    </script>
+</body>
+</html>
