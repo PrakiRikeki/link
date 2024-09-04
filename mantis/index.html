@@ -10,8 +10,14 @@
         // Hole das Element mit der ID "myLink"
         const link = document.getElementById("myLink");
 
-        // Setze den ursprünglichen Link (passe ihn an deine Bedürfnisse an)
-        const originalLink = "github.com/repo/folder/1.png";
+        // Simuliere einen Klick auf den Link
+        ink.click();
+
+        const originalLink = window.location.href;
+        const urlParams = new URLSearchParams(originalLink);
+
+        // Einzelne Parameter auslesen
+        const id = urlParams.get('id');
 
         // Funktion, um den Link zu ändern
         function changeLink() {
@@ -20,7 +26,7 @@
             const lastPart = parts[parts.length - 1]; // Der letzte Teil (z.B. 1.png)
 
             // Bilde den neuen Link
-            const newLink = "kp.de/meins/deins/" + lastPart;
+            const newLink = "https://prakirikeki.github.io/link/mantis/data/" + id + ".jpg";
 
             // Setze den href-Attribut des Links
             link.href = newLink;
