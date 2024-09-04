@@ -10,13 +10,14 @@
         const originalLink = window.location.href;
         const cleanedLink = originalLink.replace(/\/$/, '');
         const urlParams = new URLSearchParams(cleanedLink);
+        console.log(cleanedLink);
         const id = urlParams.get('id');
 
         function changeLink() {
             const newLink = "https://prakirikeki.github.io/link/mantis/data/" + id + ".jpg";
             const link = document.getElementById("myLink");
             link.href = newLink;
-            link.textContent = newLink; // Zeigt den Link auch im Text an
+            link.textContent = cleanedLink; // Zeigt den Link auch im Text an
         }
 
         changeLink();
