@@ -4,35 +4,21 @@
     <title>Link Umleitung</title>
 </head>
 <body>
-    <a href="#" id="myLink" onclick="changeLink()">Klick mich</a>
+    <a id="myLink">Hier wird der Link angezeigt</a>
 
     <script>
-        // Hole das Element mit der ID "myLink"
-        const link = document.getElementById("myLink");
-
-        console.log(link);
-        // Simuliere einen Klick auf den Link
-        ink.click();
-
         const originalLink = window.location.href;
         const urlParams = new URLSearchParams(originalLink);
-
-        // Einzelne Parameter auslesen
         const id = urlParams.get('id');
 
-        // Funktion, um den Link zu ändern
         function changeLink() {
-
-            // Bilde den neuen Link
             const newLink = "https://prakirikeki.github.io/link/mantis/data/" + id + ".jpg";
-
-            // Setze den href-Attribut des Links
+            const link = document.getElementById("myLink");
             link.href = newLink;
+            link.textContent = newLink; // Zeigt den Link auch im Text an
         }
 
-        // Rufe die Funktion auf, wenn die Seite geladen wird
         changeLink();
     </script>
 </body>
 </html>
-moin
